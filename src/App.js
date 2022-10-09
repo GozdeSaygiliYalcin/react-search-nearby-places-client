@@ -6,12 +6,13 @@ import Form from "./components/Form";
 import Maps from "./components/Maps";
 
 function App() {
-  const [latitude, setLatitude] = useState("40.10744");
-  const [longitude, setLongitude] = useState("-88.22724");
-  const [radius, setRadius] = useState("5000");
+  const [latitude, setLatitude] = useState("40.99318");
+  const [longitude, setLongitude] = useState("29.10450");
+  const [radius, setRadius] = useState("100");
 
   const [response, setResponse] = useState([]);
   const [isData, setIsData] = useState(false);
+  const [isSearched, setIsSearched] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -33,11 +34,13 @@ function App() {
     };
 
     data();
+    setIsSearched(true);
   };
 
   useEffect(() => {
     if (response.length) {
       setIsData(true);
+      setIsSearched(false);
     } else {
       setIsData(false);
     }
@@ -55,7 +58,7 @@ function App() {
         setRadius={setRadius}
         handleSubmit={handleSubmit}
       />
-      <Maps isData={isData} response={response} />
+      <Maps isData={isData} response={response} isSearched={isSearched} />
 
       <Footer />
     </div>

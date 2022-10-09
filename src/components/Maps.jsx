@@ -1,22 +1,22 @@
 import React from "react";
 import "./Maps.css";
 
-export default function Maps({ isData, response }) {
+export default function Maps({ isData, response, isSearched }) {
   return (
     <div className="maps">
-      <p>Please click name to open the map</p>
-
+      {isData ? (
+        <p className="maps__title">Please click name to open the map</p>
+      ) : null}
+      {isSearched ? <p className="maps__title">No results found</p> : null}
       {isData
-        ? // <p>Please click name to open the map</p>
-
-          response.map((res) => {
+        ? response.map((res) => {
             if (res.hasOwnProperty("photos")) {
               const ref = res?.photos[0]?.html_attributions[0].split('"');
-              console.log(ref);
+              const linkName = ref[2].slice(1, -4);
 
               return (
-                <a key={res.place_id} href={ref[1]}>
-                  {ref[2]}
+                <a className="maps__maplink" key={res.place_id} href={ref[1]}>
+                  {linkName}
                 </a>
               );
             } else {
