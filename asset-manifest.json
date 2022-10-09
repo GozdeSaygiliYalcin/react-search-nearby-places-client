@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-search-nearby-places-client/static/css/main.73fb2ee2.css",
+    "main.js": "/react-search-nearby-places-client/static/js/main.9e0d2e00.js",
+    "static/media/header-logo.svg": "/react-search-nearby-places-client/static/media/header-logo.8b5eb476c41055fb53d8ccfb19302d08.svg",
+    "index.html": "/react-search-nearby-places-client/index.html",
+    "static/media/footer-logo.svg": "/react-search-nearby-places-client/static/media/footer-logo.0b60ebfe0af2fe57656cafa771f472fc.svg",
+    "main.73fb2ee2.css.map": "/react-search-nearby-places-client/static/css/main.73fb2ee2.css.map",
+    "main.9e0d2e00.js.map": "/react-search-nearby-places-client/static/js/main.9e0d2e00.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.73fb2ee2.css",
+    "static/js/main.9e0d2e00.js"
+  ]
+}
